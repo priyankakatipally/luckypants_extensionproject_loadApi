@@ -2,8 +2,10 @@ package com.luckypants.model;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
 public class Author {
 
 	private String fname;

@@ -30,8 +30,8 @@ public class CreateAuthorCommand {
 	public static void main(String[] args) {
 		CreateAuthorCommand create = new CreateAuthorCommand();
 		Author author = new Author();
-		author.setFname("Virat");
-		author.setLname("Kohli");
+		author.setFname("Pooja");
+		author.setLname("Chopra");
 		Object id = create.execute(author);
 		if ( id!=null) {
 			System.out.println("SUCCESS:Author Created:"+id);

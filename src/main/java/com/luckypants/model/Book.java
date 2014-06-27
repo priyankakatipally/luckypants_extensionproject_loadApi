@@ -3,12 +3,21 @@ package com.luckypants.model;
 import java.util.ArrayList;
 
 import org.bson.types.ObjectId;
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Book {
 	private String title;
-	private String author;
+	@JsonIgnore private Author author;
+	public Author getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(Author author) {
+		this.author = author;
+	}
+
 	private String _author_id;
 	private String ISBN;
 	private String genres;
@@ -38,13 +47,7 @@ public class Book {
 		this.genres = genres;
 	}
 
-	public String getAuthor() {
-		return author;
-	}
 
-	public void setAuthor(String author) {
-		this.author = author;
-	}
 
 	public String get_author_id() {
 		return _author_id;

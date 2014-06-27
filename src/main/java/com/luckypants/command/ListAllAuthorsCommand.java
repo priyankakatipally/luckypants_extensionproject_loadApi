@@ -27,6 +27,7 @@ public class ListAllAuthorsCommand {
 						cursor.next().get("_id").toString());
 				authors.add(b);
 			
+			
 		}
 		
 	}catch (Exception e) {
