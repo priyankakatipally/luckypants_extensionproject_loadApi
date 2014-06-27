@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import com.luckypants.command.GetAuthorCommand;
@@ -24,7 +26,8 @@ public class readfromfile {
 }
 	public ArrayList<Book> readCsvFile() {
 		 
-		String csvFile = "samplefile.csv";
+		String csvFile = "D:\\New folder\\samplefile.csv";
+		//InputStream input = getClass().getClassLoader().getResourceAsStream(csvFile);
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
@@ -35,8 +38,10 @@ public class readfromfile {
 		String[] genres= null;
 		ArrayList<Book> b = null;
 	 
+		
 		try {
 				b=new ArrayList<Book>();
+				//br=new BufferedReader(new InputStreamReader(input));
 				br = new BufferedReader(new FileReader(csvFile));
 			
 				while((line = br.readLine()) != null) {
