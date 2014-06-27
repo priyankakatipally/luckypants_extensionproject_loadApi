@@ -24,7 +24,7 @@ public class readfromfile {
 }
 	public ArrayList<Book> readCsvFile() {
 		 
-		String csvFile = "D:/New folder/samplefile.csv";
+		String csvFile = "samplefile.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";

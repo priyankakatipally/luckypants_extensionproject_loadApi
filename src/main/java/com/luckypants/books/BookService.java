@@ -79,8 +79,6 @@ public class BookService {
 		ObjectMapper mapper = new ObjectMapper();
 		readfromfile obj = new readfromfile();
 		ArrayList<Book> list=obj.readCsvFile();
-		
-		
 		BooksConnectionProvider booksConn = new BooksConnectionProvider();
 		DBCollection booksCollection = booksConn.getCollection();
 
